@@ -1,0 +1,32 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "Api RESTFULL Servicios Ya",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/martinachov/servicios-ya-API.git"
+  },
+  "author": "Martin Vacas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/martinachov/servicios-ya-API/issues"
+  },
+  "homepage": "https://github.com/martinachov/servicios-ya-API#readme",
+  "dependencies": {
+    "bcrypt": "^1.0.3",
+    "jsonwebtoken": "^8.1.1",
+    "mongoose": "^5.0.3",
+    "mongoose-string-query": "^0.2.5",
+    "mongoose-timestamp": "^0.6.0",
+    "restify": "^6.3.4",
+    "restify-errors": "^5.0.0",
+    "restify-routing": "^0.3.11"
+  },
+  "devDependencies": {
+    "nodemon": "^1.14.12"
+  }
+}
