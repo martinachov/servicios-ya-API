@@ -128,7 +128,7 @@ module.exports = {
         User.find({}, {})
             .then((result) => {
                 console.log('Users loaded OK!!' + result);
-                res.send(result.docs);
+                res.send(JSON.stringify(result));
             })
             .catch(error => {
                 console.log(error, 'Error while loading user')
