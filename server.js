@@ -4,6 +4,9 @@
 const restify = require('restify');
 const mongoose = require('mongoose');
 
+//Require routes
+const routes = require('./route');
+
 //Configuration file
 const config = require('./configuration/config');
 
@@ -19,9 +22,15 @@ db.once('open', () => {
     console.log(`Database connection succesful to "${db.host}:${db.port}/${db.name}"`);
 });
 
-
 //Controller
 var server = restify.createServer();
+
+//Plugins
+server.use(restify.plugins.jsonBodyParser());
+server.use(restify.plugins.queryParser());
+
+//Config Router
+routes(server);
 
 //Start the server
 server.listen(config.port, function(){
